@@ -1,8 +1,11 @@
 let CachedNameData = "restaurants-static-v3";
 
+// Use below baseurl for local development
+let BASE_URL = 'http://localhost:8004/'
+let BASE_URL = 'https://vksthomas.github.io/restaurant-review-app/'
+
 let UrlstobeCached = [
-  './',
-  './index.html',
+  'index.html',
   'restaurant.html?id=1',
   'restaurant.html?id=2',
   'restaurant.html?id=3',
@@ -13,31 +16,30 @@ let UrlstobeCached = [
   'restaurant.html?id=8',
   'restaurant.html?id=9',
   'restaurant.html?id=10',
-  './restaurant.html',
-  './css/styles.css',
-  './js/main.js',
-  './js/restaurant_info.js',
-  './js/dbhelper.js',
-  './js/sw_registration.js',
-  './data/restaurants.json',
-  './img/1.jpg',
-  './img/2.jpg',
-  './img/3.jpg',
-  './img/4.jpg',
-  './img/5.jpg',
-  './img/6.jpg',
-  './img/7.jpg',
-  './img/8.jpg',
-  './img/9.jpg',
-  './img/10.jpg',
+  'restaurant.html',
+  'css/styles.css',
+  'js/main.js',
+  'js/restaurant_info.js',
+  'js/dbhelper.js',
+  'js/sw_registration.js',
+  'data/restaurants.json',
+  'img/1.jpg',
+  'img/2.jpg',
+  'img/3.jpg',
+  'img/4.jpg',
+  'img/5.jpg',
+  'img/6.jpg',
+  'img/7.jpg',
+  'img/8.jpg',
+  'img/9.jpg',
+  'img/10.jpg',
 ];
-
 
 self.addEventListener("install", event => {
   event.waitUntil(
     caches
       .open(CachedNameData)
-      .then(cache => cache.addAll(UrlstobeCached))
+      .then(cache => cache.addAll(UrlstobeCached.map(u=>BASE_URL + u)))
       .then(self.skipWaiting())
   );
 });

@@ -1,6 +1,12 @@
 /**
  * Common database helper functions.
  */
+
+// Use below baseurl for local development
+// window.BASE_URL = 'http://localhost:8004/'
+window.BASE_URL = 'https://vksthomas.github.io/restaurant-review-app/'
+
+
 class DBHelper {
 
   /**
@@ -8,8 +14,8 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    // const port = 8004 // Change this to your server port
-    return `https://vksthomas.github.io/restaurant-review-app/data/restaurants.json`;
+    return `${BASE_URL}/data/restaurants.json`;
+
   }
 
   /**
@@ -143,14 +149,14 @@ class DBHelper {
    * Restaurant page URL.
    */
   static urlForRestaurant(restaurant) {
-    return (`./restaurant.html?id=${restaurant.id}`);
+    return (`${BASE_URL}/restaurant.html?id=${restaurant.id}`);
   }
 
   /**
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`https://vksthomas.github.io/restaurant-review-app/img/${restaurant.photograph}`);
+    return (`${BASE_URL}/img/${restaurant.photograph}`);
   }
 
   /**
