@@ -1,8 +1,8 @@
 let CachedNameData = "restaurants-static-v3";
 
 // Use below baseurl for local development
-let BASE_URL = 'http://localhost:8004/'
-// let BASE_URL = 'https://vksthomas.github.io/restaurant-review-app/'
+// let BASE_URL = 'http://localhost:8004/'
+let BASE_URL = 'https://vksthomas.github.io/restaurant-review-app/'
 
 let UrlstobeCached = [
   '',
