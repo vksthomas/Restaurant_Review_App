@@ -150,7 +150,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (`https://vksthomas.github.io/restaurant-review-app/img/${restaurant.photograph}`);
   }
 
   /**
