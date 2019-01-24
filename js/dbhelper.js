@@ -4,7 +4,7 @@
 
 // Use below baseurl for local development
 // window.BASE_URL = 'http://localhost:8004/'
-window.BASE_URL = 'https://vksthomas.github.io/restaurant-review-app/'
+window.BASE_URL = 'https://vksthomas.github.io/restaurant-review-app'
 
 
 class DBHelper {
